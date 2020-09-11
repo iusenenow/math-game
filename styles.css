@@ -53,6 +53,12 @@ body {
   transform: scale(1.2);
 }
 
+.overlay-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 body.overlay-is-open .overlay {
   opacity: 1;
   visibility: visible;
@@ -120,4 +126,9 @@ button:hover {
 
 .text {
   padding: 0.8rem 0;
+}
+
+.end-message {
+  font-size: 2rem;
+  font-weight: bold;
 }
