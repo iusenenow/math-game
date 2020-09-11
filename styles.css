@@ -1,0 +1,123 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  color: #666;
+}
+
+.progress {
+  border: 1px solid #c7c7c7;
+  border-right: none;
+  position: relative;
+}
+
+.progress-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #7ecc00;
+  opacity: .57;
+  transform: scaleX(0);
+  transform-origin: center left;
+  transition: transform .4s ease-in-out;
+}
+
+.boxes {
+  display: flex;
+  width: 100%;
+}
+
+.box {
+  height: 60px;
+  border-right: 1px solid #c7c7c7;
+  flex: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, .82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .33s ease-in-out;
+  transform: scale(1.2);
+}
+
+body.overlay-is-open .overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+body.overlay-is-open .main-ui {
+  filter: blur(4px);
+}
+
+@keyframes showError {
+  50% {
+    color: red;
+    transform: scale(1.2);
+  }
+
+  100% {
+    color: #333;
+    transform: scale(1);
+  }
+}
+
+.animate-wrong {
+  animation: .33s showError;
+}
+
+.problem {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.main-ui {
+  text-align: center;
+}
+
+.our-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.our-field {
+  padding: 0.3rem;
+  font-size: 1.3rem;
+  color: #666;
+}
+
+button {
+  padding: 8px 14px;
+  background-color: #02C39A;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  transition: all .33s ease-in-out;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: .5rem;
+  outline: none;
+}
+
+button:hover {
+  background-color: #00A896;
+}
+
+.text {
+  padding: 0.8rem 0;
+}
